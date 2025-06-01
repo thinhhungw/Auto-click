@@ -1,0 +1,2 @@
+# Auto-click
+HOW TO MAKE A AUTO CLICKER
