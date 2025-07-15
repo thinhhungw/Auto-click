@@ -46,7 +46,7 @@ INTERVAL_BETWEEN_CYCLES = 300
 - `sleep_time` là số giây script sẽ chờ *sau khi* nhấp vào điểm đó và *trước khi* chuyển sang điểm tiếp theo. Nếu bạn không muốn chờ sau một điểm, hãy đặt `sleep_time` là `0`.
 #### **`INTERVAL_BETWEEN_CYCLES`**:
 - Đây là khoảng thời gian (tính bằng giây) mà script sẽ chờ *sau khi hoàn thành tất cả các lần nhấp trong `CLICK_POINTS`* và *trước khi bắt đầu lại chu kỳ mới*. Mặc định là 300 giây (5 phút).
-- 
+
 ### Bước 2: Chạy script
 - Mở Terminal hoặc Command Prompt/PowerShell, điều hướng đến thư mục chứa tệp `click.py` và chạy lệnh sau:
 ```
