@@ -18,8 +18,7 @@
 
 ### Cài đặt thư viện `pyautogui`:
 - Mở Terminal (trên macOS/Linux) hoặc Command Prompt/PowerShell (trên Windows) và chạy lệnh sau:
-  ```
-  pip install pyautogui
+  ```  pip install pyautogui
   ```
 
 ## Cách sử dụng
@@ -27,8 +26,7 @@
 - Để script có thể nhấp chuột đúng vị trí bạn muốn, bạn cần phải biết tọa độ (X, Y) của các điểm đó trên màn hình của mình.
 - Bạn có thể sử dụng script `checkXY.py` (cũng có trong kho lưu trữ này) để lấy tọa độ:
 - Chạy `checkXY.py`:
-    ```
-    python checkXY.py
+    ```    python checkXY.py
     ```
 - Di chuột đến điểm bạn muốn nhấp trên màn hình.
 - Tọa độ (X, Y) sẽ hiển thị liên tục trong cửa sổ Terminal/Command Prompt. Ghi lại các giá trị này.
