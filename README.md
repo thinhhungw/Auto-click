@@ -23,19 +23,7 @@
   ```
 
 ## Cách sử dụng
-### Bước 1: Xác định tọa độ nhấp chuột
-- Để script có thể nhấp chuột đúng vị trí bạn muốn, bạn cần phải biết tọa độ (X, Y) của các điểm đó trên màn hình của mình.
-- Bạn có thể sử dụng script `checkXY.py` (cũng có trong kho lưu trữ này) để lấy tọa độ:
-- Chạy `checkXY.py`:
-    ```
-    python checkXY.py
-    ```
-- Di chuột đến điểm bạn muốn nhấp trên màn hình.
-- Tọa độ (X, Y) sẽ hiển thị liên tục trong cửa sổ Terminal/Command Prompt. Ghi lại các giá trị này.
-- Nhấn `Ctrl+C` để dừng script `checkXY.py`.
-- **Lưu ý quan trọng:** Đảm bảo cửa sổ Terminal/Command Prompt không che khuất điểm bạn muốn lấy tọa độ. Tọa độ được lấy phải chính xác trên màn hình mà bạn sẽ chạy `click.py`.
-
-### Bước 2: Cấu hình `click.py`
+### Bước 1: Cấu hình `click.py`
 - Mở tệp `click.py` trong một trình soạn thảo văn bản và chỉnh sửa phần `CLICK_POINTS` và `INTERVAL_BETWEEN_CYCLES`.
 ```
 # Danh sách các tọa độ X, Y và thời gian chờ sau khi nhấp vào điểm đó (tính bằng giây).
@@ -59,7 +47,7 @@ INTERVAL_BETWEEN_CYCLES = 300
 #### **`INTERVAL_BETWEEN_CYCLES`**:
 - Đây là khoảng thời gian (tính bằng giây) mà script sẽ chờ *sau khi hoàn thành tất cả các lần nhấp trong `CLICK_POINTS`* và *trước khi bắt đầu lại chu kỳ mới*. Mặc định là 300 giây (5 phút).
 - 
-### Bước 3: Chạy script
+### Bước 2: Chạy script
 - Mở Terminal hoặc Command Prompt/PowerShell, điều hướng đến thư mục chứa tệp `click.py` và chạy lệnh sau:
 ```
 python click.py
