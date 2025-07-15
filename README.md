@@ -1,17 +1,17 @@
-## Auto-Clicker Python Script
+## 🎉 Auto-Clicker Python Script
 - Đây là một script Python đơn giản được thiết kế để tự động nhấp chuột vào các vị trí cụ thể trên màn hình máy tính của bạn theo chu kỳ và với thời gian chờ tùy chỉnh cho từng điểm nhấp.
 
-## Tính năng
+## 🎮 Tính năng
 - **Nhấp chuột đa điểm**: Hỗ trợ nhấp vào nhiều tọa độ khác nhau theo một trình tự đã định.
 - **Thời gian chờ tùy chỉnh**: Mỗi điểm nhấp có thể có thời gian chờ riêng biệt sau khi được nhấp, cho phép kiểm soát linh hoạt luồng công việc tự động.
 - **Chu kỳ lặp lại**: Script sẽ tự động lặp lại toàn bộ chuỗi nhấp chuột sau một khoảng thời gian xác định.
 
-## Yêu cầu
+## 🚀 Yêu cầu
 Để chạy script này, bạn cần cài đặt:
 - Python 3.x
 - Thư viện `pyautogui`
 
-## Cài đặt
+## ⚙️ Cài đặt
 
 ### Cài đặt Python:
 - Nếu bạn chưa có Python, hãy tải xuống và cài đặt từ trang web chính thức: [python.org](https://www.python.org/downloads/)
@@ -22,8 +22,8 @@
   pip install pyautogui
   ```
 
-## Cách sử dụng
-### Bước 1: Cấu hình `click.py`
+## 📚 Cách sử dụng
+### ✅ Bước 1: Cấu hình `click.py`
 - Mở tệp `click.py` trong một trình soạn thảo văn bản và chỉnh sửa phần `CLICK_POINTS` và `INTERVAL_BETWEEN_CYCLES`.
 ```
 # Danh sách các tọa độ X, Y và thời gian chờ sau khi nhấp vào điểm đó (tính bằng giây).
@@ -47,7 +47,7 @@ INTERVAL_BETWEEN_CYCLES = 300
 #### **`INTERVAL_BETWEEN_CYCLES`**:
 - Đây là khoảng thời gian (tính bằng giây) mà script sẽ chờ *sau khi hoàn thành tất cả các lần nhấp trong `CLICK_POINTS`* và *trước khi bắt đầu lại chu kỳ mới*. Mặc định là 300 giây (5 phút).
 
-### Bước 2: Chạy script
+### ⬇️ Bước 2: Chạy script
 - Mở Terminal hoặc Command Prompt/PowerShell, điều hướng đến thư mục chứa tệp `click.py` và chạy lệnh sau:
 ```
 python click.py
@@ -56,7 +56,7 @@ python click.py
 ### Dừng script
 - Để dừng script, bạn chỉ cần nhấn `Ctrl+C` trong cửa sổ Terminal/Command Prompt nơi script đang chạy.
 
-## Lưu ý quan trọng
+## 📌 Lưu ý quan trọng
 - **Tỷ lệ hiển thị màn hình (Display Scaling)**: Nếu bạn đang sử dụng Windows và có cài đặt tỷ lệ hiển thị khác 100% (ví dụ: 125% hoặc 150%), `pyautogui` có thể gặp vấn đề về ánh xạ tọa độ. Hãy thử đặt về 100% nếu bạn gặp sự cố.
 - **Môi trường ảo hóa/Từ xa**: Script có thể hoạt động không ổn định khi chạy trên máy ảo (VM) hoặc qua các kết nối từ xa (như RDP, TeamViewer) do cách chúng xử lý tương tác chuột.
 - **Kiểm soát**: Sử dụng script này một cách cẩn thận. Đảm bảo bạn đã cấu hình đúng tọa độ và thời gian chờ để tránh các hành động không mong muốn. Luôn kiểm tra kỹ trước khi sử dụng trong các tác vụ quan trọng.
