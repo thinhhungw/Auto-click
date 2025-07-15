@@ -1,30 +1,30 @@
 ## 🎉 Auto-Clicker Python Script
-- Đây là một script Python đơn giản được thiết kế để tự động nhấp chuột vào các vị trí cụ thể trên màn hình máy tính của bạn theo chu kỳ và với thời gian chờ tùy chỉnh cho từng điểm nhấp.
+- This is a simple Python script designed to automatically click at specific locations on your computer screen in cycles and with custom delays for each click point.
 
-## 🎮 Tính năng
-- **Nhấp chuột đa điểm**: Hỗ trợ nhấp vào nhiều tọa độ khác nhau theo một trình tự đã định.
-- **Thời gian chờ tùy chỉnh**: Mỗi điểm nhấp có thể có thời gian chờ riêng biệt sau khi được nhấp, cho phép kiểm soát linh hoạt luồng công việc tự động.
-- **Chu kỳ lặp lại**: Script sẽ tự động lặp lại toàn bộ chuỗi nhấp chuột sau một khoảng thời gian xác định.
+## 🎮 Features
+- **Multi-point clicking**: Supports clicking at multiple different coordinates in a defined sequence.
+- **Customizable delays**: Each click point can have its own specific delay after being clicked, allowing for flexible control over the automated workflow.
+- **Repeat cycles**: The script will automatically repeat the entire click sequence after a specified interval.
 
-## 🚀 Yêu cầu
-Để chạy script này, bạn cần cài đặt:
+## 🚀 Requirements
+To run this script, you need to install:
 - Python 3.x
-- Thư viện `pyautogui`
+- The `pyautogui` library
 
-## ⚙️ Cài đặt
+## ⚙️ Installation
 
-### Cài đặt Python:
-- Nếu bạn chưa có Python, hãy tải xuống và cài đặt từ trang web chính thức: [python.org](https://www.python.org/downloads/)
+### Install Python:
+- If you don't have Python, download and install it from the official website: [python.org](https://www.python.org/downloads/)
 
-### Cài đặt thư viện `pyautogui`:
-- Mở Terminal (trên macOS/Linux) hoặc Command Prompt/PowerShell (trên Windows) và chạy lệnh sau:
+### Install the `pyautogui` library:
+- Open Terminal (on macOS/Linux) or Command Prompt/PowerShell (on Windows) and run the following command:
   ```
   pip install pyautogui
   ```
 
-## 📚 Cách sử dụng
-### ✅ Bước 1: Cấu hình `click.py`
-- Mở tệp `click.py` trong một trình soạn thảo văn bản và chỉnh sửa phần `CLICK_POINTS` và `INTERVAL_BETWEEN_CYCLES`.
+## 📚 How to Use
+### ✅ Step 1: Configure `click.py`
+- Open the `click.py` file in a text editor and edit the `CLICK_POINTS` and `INTERVAL_BETWEEN_CYCLES` sections.
 ```
 # Danh sách các tọa độ X, Y và thời gian chờ sau khi nhấp vào điểm đó (tính bằng giây).
 # Mỗi phần tử trong danh sách là một tuple (x, y, sleep_time).
@@ -41,27 +41,27 @@ CLICK_POINTS = [
 INTERVAL_BETWEEN_CYCLES = 300
 ````
 #### **`CLICK_POINTS`**:
-- Thay thế các cặp tọa độ mẫu bằng tọa độ thực tế bạn đã lấy ở Bước 1.
-- Mỗi phần tử phải là một tuple gồm 3 giá trị `(X, Y, sleep_time)`.
-- `sleep_time` là số giây script sẽ chờ *sau khi* nhấp vào điểm đó và *trước khi* chuyển sang điểm tiếp theo. Nếu bạn không muốn chờ sau một điểm, hãy đặt `sleep_time` là `0`.
+- Replace the sample coordinate pairs with the actual coordinates you obtained in Step 1.
+- Each element must be a tuple of 3 values: `(X, Y, sleep_time)`.
+- `sleep_time` is the number of seconds the script will wait *after* clicking that point and *before* moving to the next point. If you don't want to wait after a point, set `sleep_time` to `0`.
 #### **`INTERVAL_BETWEEN_CYCLES`**:
-- Đây là khoảng thời gian (tính bằng giây) mà script sẽ chờ *sau khi hoàn thành tất cả các lần nhấp trong `CLICK_POINTS`* và *trước khi bắt đầu lại chu kỳ mới*. Mặc định là 300 giây (5 phút).
+- This is the duration (in seconds) the script will wait *after completing all clicks in `CLICK_POINTS`* and *before starting the new cycle again*. The default is 300 seconds (5 minutes).
 
-### ⬇️ Bước 2: Chạy script
-- Mở Terminal hoặc Command Prompt/PowerShell, điều hướng đến thư mục chứa tệp `click.py` và chạy lệnh sau:
+### ⬇️ Step 2: Run the script
+- Open Terminal or Command Prompt/PowerShell, navigate to the directory containing the `click.py` file, and run the following command:
 ```
 python click.py
 ```
 
-### Dừng script
-- Để dừng script, bạn chỉ cần nhấn `Ctrl+C` trong cửa sổ Terminal/Command Prompt nơi script đang chạy.
+### Stopping the script
+- To stop the script, simply press `Ctrl+C` in the Terminal/Command Prompt window where the script is running.
 
-## 📌 Lưu ý quan trọng
-- **Tỷ lệ hiển thị màn hình (Display Scaling)**: Nếu bạn đang sử dụng Windows và có cài đặt tỷ lệ hiển thị khác 100% (ví dụ: 125% hoặc 150%), `pyautogui` có thể gặp vấn đề về ánh xạ tọa độ. Hãy thử đặt về 100% nếu bạn gặp sự cố.
-- **Môi trường ảo hóa/Từ xa**: Script có thể hoạt động không ổn định khi chạy trên máy ảo (VM) hoặc qua các kết nối từ xa (như RDP, TeamViewer) do cách chúng xử lý tương tác chuột.
-- **Kiểm soát**: Sử dụng script này một cách cẩn thận. Đảm bảo bạn đã cấu hình đúng tọa độ và thời gian chờ để tránh các hành động không mong muốn. Luôn kiểm tra kỹ trước khi sử dụng trong các tác vụ quan trọng.
-- **Quyền truy cập**: Trên một số hệ điều hành (ví dụ: macOS), bạn có thể cần cấp quyền truy cập/điều khiển cho ứng dụng Terminal hoặc IDE của bạn trong phần cài đặt bảo mật và quyền riêng tư.
-- **Độ phân giải màn hình**: Đảm bảo độ phân giải màn hình không thay đổi giữa lúc bạn lấy tọa độ và lúc bạn chạy script.
+## 📌 Important Notes
+- **Display Scaling**: If you are using Windows and have a display scaling setting other than 100% (e.g., 125% or 150%), `pyautogui` may encounter issues with coordinate mapping. Try setting it to 100% if you experience problems.
+- **Virtualization/Remote Environments**: The script may not work stably when run on a virtual machine (VM) or via remote connections (like RDP, TeamViewer) due to how they handle mouse interactions.
+- **Control**: Use this script carefully. Ensure you have correctly configured the coordinates and delays to avoid unintended actions. Always double-check before using it for critical tasks.
+- **Permissions**: On some operating systems (e.g., macOS), you may need to grant accessibility/control permissions to your Terminal application or IDE in the security and privacy settings.
+- **Screen Resolution**: Ensure that the screen resolution does not change between when you obtain the coordinates and when you run the script.
 
 ## 📩 Contact me on Discord:
 - Username: migu_2008
